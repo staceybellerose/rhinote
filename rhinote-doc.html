@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Rhinote - Documentation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+</head>
+
+<body>
+		<h3>Rhinote Documentation</h3>
+		<p style="font-size: 0.7em ; font-style: italic ;">Rhinote is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.<br />
+<br />
+Rhinote is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.<br />
+<br />
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA</p>
+		<p></p>
+		<p>
+		<a href="#about">About</a><br />
+		<a href="#installation">Installation</a><br />
+		<a href="#usage">Usage</a><br />
+		<a href="#windows">A Note on the Windows Version</a><br />	
+		<a href="#printing">Printing Notes</a><br />
+		<a href="#extensions">A Note on File Extensions</a><br />
+		<a href="#limitations">Limitations and Wishlist</a><br />
+		<a href="#hacking">"Hacking" Rhinote</a><br />
+		<a href="#contact">Contact and Support</a><br />
+		<a href="#acknowledgements">Acknowledgements</a>
+		</p>		  
+	<p><a name="about"></a><strong>About:</strong> Rhinote is a small, simple Python/Tkinter script that provides virtual "sticky-notes" on your desktop. It's handy for jotting down quick notes or holding copied text that you plan to paste elsewhere later. Notes can be saved (as plain ASCII text) for later viewing/editing with Rhinote or any other text editor. While many such "sticky-note" programs exist for virtually all computing platforms, Rhinote is extremely simple, lightweight, and "keyboard-friendly."</p>
+	<p>Rhinote should run on <strong>any</strong> computer that has Python 2.5 or later and its Tkinter module installed. It has been successfully run on various distributions of Linux, as well as Windows 98SE, ME, and XP and Mac OS X.</p>
+	<p>You can download Python for a variety of platforms at <a href="http://www.python.org/" target="_blank">www.python.org</a>. The latest version of Rhinote is always available from <a href="http://rhinote.tuxfamily.org">http://rhinote.tuxfamily.org</a>.</p>
+	<p><a name="installation"></a><strong>Installation:</strong> Simply put the rhinote.py (or rhinote-win.pyw, if you're using Windows) script wherever you keep scripts. No formal installation is required.</p>				
+	<p><a name="usage"></a><strong>Usage:</strong> On Linux, use a terminal to <code>cd</code> to the directory where rhinote.py lives and type <code>python rhinote.py</code> (or <code>python rhinote.py &amp;</code> to get your command prompt back). Optionally, you may turn rhinote.py into an executable by placing it in your <code>~/bin</code> directory, renaming it <code>rhinote</code>, and making it executable with (for example) <code>chmod +x rhinote</code>.</p> 
+	<p>On Windows, double-clicking on the <code>rhinote-win.pyw</code> script should run it, provided you have Python installed.</p>	
+	<p>When the Rhinote note appears, simply start typing, or paste (Ctrl-V) any text you've already cut/copied to your system clipboard. Rhinote will automatically wrap words at the ends of lines (see <a href="#hacking">"Hacking" Rhinote</a> to change this behavior).</p>
+	<p>Rhinote offers a set of very simple text and file manipulation tools; all commands are keyboard-driven. Pressing <code>Ctrl-h</code> at any time will display all available commands:</p>
+	<ul>
+		<li>Ctrl-x: Cut selected text</li>
+		<li>Ctrl-c: Copy selected text</li>
+		<li>Ctrl-v: Paste text from clipboard (should work with text copied/cut from any application)</li>
+        <li>Ctrl-z: Undo</li>
+        <li>Ctrl-Shift-z: Redo</li>
+		<li>Ctrl-n: Open new (blank) Rhinote</li>
+		<li>Ctrl-o: Open file (via a file dialog)</li>
+		<li>Ctrl-s: Save current note</li>
+		<li>Ctrl-a: Save current note as <em>filename</em></li>
+		<li>Ctrl-p: Print current note <strong>[Linux only]</strong></li>
+		<li>Ctrl-h: Display help</li>
+	</ul>
+	<p><a name="windows"></a><strong>A Note on the Windows Version:</strong> You may (or may not) have noticed that the Windows version of the script has a slightly different file extension (.pyw) from the Linux version (.py). This is so the program will run in Windows without also opening a command prompt. This is probably the way you'll want it to work most of the time. If you want the command prompt back (it would be useful if you decided to make changes to the code and want see what's happening "under the hood"), simply change the file extension to .py</p>
+	<p><a name="printing"></a><strong>Printing Notes (Linux Only):</strong> The Linux version of Rhinote offers a very rudimentary printing "system" (if you want to call it that). It uses the <code>enscript</code> program to format the text, then passes the result to <code>lpr</code> for printing. As long as you have these two programs installed (most Linux distributions do), Rhinote notes will print on your default printer.</p>
+		<p><a name="limitations"></a><strong>Limitations and Wishlist:</strong> At the moment, Rhinote is not very smart. It <strong>will not ask for confirmation when you exit</strong>, and any text in a given note will vanish if you don't save it first. Put simply, there is no save-before-exit functionality. I desperately want this, though, and will include it in a future version as soon as I learn how to do it. If you're a Python programmer who knows how to implement it, I'd love to hear about it.</p>
+	<p>I would also like to learn how to implement the printing function in the Windows version; again, if you know how, please <a href="#contact">contact me</a>.</p>
+	<p><a name="hacking"></a><strong>"Hacking" Rhinote:</strong> Since Rhinote has no formal configuration system, any changes to the program's look and feel must be made in the source code. Luckily, Rhinote is extremely simple and any changes should be easy to make. The following are some examples (and please note that any changes must be saved, and the application restarted, in order for them to take effect; and since you're editing source, you might want to work from a copy, just in case...):</p>
+	<p>&middot;&nbsp;<em>Change the note's background color</em>: I chose the default color for its obvious resemblance to paper sticky-notes. You can change this default color to anything you like by editing this line, under <code>def Rhinote():</code> in the <code>rhinote.py</code> (or <code>.pyw</code>) source:</p>
+	<blockquote>&nbsp;&nbsp;<code>t = TextWidget(r, bg = '#f9f3a9', wrap = 'word', undo = True)</code></blockquote>
+	<p>The color is defined (in hex) in the <code>bg = '#f9f3a9'</code> section. Simply change this to whatever hex triplet you'd like and save the file. (If you don't have a desktop application with the means to determine a color's hex notation, you can use <a href="http://www.colorpicker.com" target="_blank">this website</a>.)</p>
+	<p>&middot;&nbsp;<em>Change the note's default size</em>: Another arbitrary choice I made when writing the program, and another parameter that can be easily changed. While Rhinote's window can be resized like any other by simply clicking and dragging its border, the default size at startup is defined in this line (again, in the code under <code>def Rhinote():</code>):</p>
+	<blockquote>&nbsp;&nbsp;<code>r.geometry('220x235')</code></blockquote>
+	<p>In this example, 220 is the width (in pixels) and 235 is the height. Either can be changed to whatever value you wish.</p>
+	<p>&middot;&nbsp;<em>Disable word-wrap</em>: Going back to the line beginning <code>t = TextWidget</code>, simply change <code>wrap = 'word'</code> to <code>wrap = 'none'</code>. I'm not sure why you'd want to do this, since you won't get a nifty horizontal scrollbar to navigate your note, but it's your option.</p>
+	<p>&middot;&nbsp;<em>Disable the "File Saved" dialog</em>: You might find this dialog annoying every time you save a file (since an asterisk in Rhinote's titlebar indicates whether or not changes to a file have been saved). To disable it, look for the following line:</p>
+	<blockquote>&nbsp;&nbsp;<code>tkMessageBox.showinfo ('FYI', 'File Saved')</code></blockquote>
+	<p>This line occurs <strong>twice</strong> in the code: at the end of the <code>def save_file</code> function, and again at the end of <code>def save_file_as</code>. Simply comment out the lines (put a # at the beginning of each) or delete them, and this potentially-annoying feature will be gone.</p>
+	<p>&middot;&nbsp;<em>Change Rhinote's default keybindings</em>: In choosing which keys to assign to Rhinote's command set, I simply followed the more-or-less established conventions of the simpler GUI text editors. If you don't like my choices, feel free to change them: you'll find the keybindings in the <code>def __init__</code> section of the source, near the end of the file. I suppose you could even make Rhinote's commands behave just like their counterparts in GNU Emacs, though I can't imagine why anyone would <em>want</em> to. ;)</p>
+	<p>There are certainly many other ways to modify the way Rhinote looks and behaves; feel free to make whatever changes or improvements you like. I would be delighted to hear of any, especially if you can figure out how to implement a save-changes-before-exit function.</p>
+	<p><a name="contact"></a><strong>Contact and Support:</strong> Please send your complaints, comments, and/or questions to greyspace(AT)tuxfamily.org. My life will be easier, and your response quicker, if you use the word 'Rhinote' somewhere in the subject line. While I'll do what I can to help you or to accommodate your requests, please don't expect any sort of Pythonic wisdom. I learned just enough Python to do what I wanted; that is, to make this program. I use the heck out of it as written, so I'm not inclined to introduce a lot of new features. I'm not saying it won't happen; but if you need more from a text widget than Rhinote provides, there are many excellent programs which might better suit your needs.</p>
+	<p><a name="acknowledgements"></a><strong>Acknowledgements:</strong> Most of what little I know of Python I learned from watching the denizens of the <a href="http://mail.python.org/mailman/listinfo/tutor" target="_blank">Python-Tutor</a> and <a href="http://mail.python.org/mailman/listinfo/tkinter-discuss" target="_blank">Tkinter-Discuss</a> mailing lists. In particular, Michael Lange provided me with a great deal of help in turning Rhinote into a semi-respectable piece of scripting.</p>
+	<p><a href="http://www.kiyuko.org/index:en" target="_blank">KiyuKo</a>, author of the splendid PHP-based weblogging platform <a href="http://www.kiyuko.org/poster:en" target="_blank">Poster</a>, made several suggestions for making Rhinote's code more easily-navigable, and the distribution archive a lot more sensible. He is also the creator and maintainer of the <a href="http://packages.debian.org/search?suite=default&amp;section=all&amp;arch=any&amp;searchon=names&amp;keywords=rhinote" target="_blank">Rhinote package for Debian Linux</a>.</p>
+	<p><em>Yes, I do like to hear myself type. Isn't it funny that this documentation is almost twice as large as the program it describes?</em></p>
+	  
+</body>
+</html>
+

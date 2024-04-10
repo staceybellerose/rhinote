@@ -1,0 +1,19 @@
+2010-01-19 Marv Boyes <greyspace@tuxfamily.org>
+
+    * rhinote.py, rhinote-win.pyw: Removed dedicated cut/copy/paste functions in favor of Tkinter's native cut/copy/paste. Added undo/redo and immediate focus. Minor code cleanup.
+
+    * rhinote_doc.html: Documentation updated to reflect undo/redo and changes to parts of the source which the end user might find interesting.
+
+2008-07-14 Marv Boyes <greyspace@tuxfamily.org>
+
+    * rhinote.py, rhinote-win.pyw: Changes to comments to reflect new home site and developer contact information.
+
+    * rhinote_doc.html: Documentation updated to reflect new home site and developer contact information.
+
+2008-03-23 Marv Boyes <greyspace@tuxfamily.org>
+
+    * rhinote.py, rhinote-win.pyw: Point release to reconcile upstream with Debian package policy.
+
+2006-03-23 Marv Boyes <greyspace@tuxfamily.org>
+    
+    * Initial public release

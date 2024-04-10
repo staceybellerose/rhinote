@@ -1,0 +1,5 @@
+Changes in version 0.7.4:
+
+    * Removed dedicated cut/copy/paste in favor of Tkinter's native cut/copy/paste. This squashes a bug which caused Rhinote to double-paste under later versions of Python.
+    * Added undo/redo.
+    * Rhinote now receives immediate focus when launched.

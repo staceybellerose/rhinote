@@ -1,0 +1,10 @@
+Rhinote is a Python script and as such requires no formal installation.
+
+Basic usage:
+
+	python rhinote.py
+OR
+
+	python rhinote-win.pyw
+
+Please see the file rhinote_doc.html for more detailed information.

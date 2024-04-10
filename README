@@ -1,0 +1,24 @@
+README -- Rhinote 0.7.4
+
+A simple "virtual sticky-notes" script in Python
+Copyright 2006, 2010 by Marv Boyes
+greyspace@tuxfamily.org
+http://rhinote.tuxfamily.org
+
+-----------
+
+Thank you for downloading Rhinote. The distribution archive (either rhinote-xxx.tar.gz or rhinote-xxx.zip) 
+should contain the following files:
+
+rhinote.py : the Linux version of Rhinote
+rhinote-win.pyw : the Windows version
+rhinote-doc.html : Rhinote's documentation
+README: the file you're reading.
+COPYING: the GNU General Public License, version 2.
+icons/rhinote_48x48.png 
+icons/rhinote_32x32.png: suggested icons for use with the program (PNG format)
+icons/rhinote_48x48.ico
+icons/rhinote_32x32.ico: suggested icons for use with the program (Microsoft Windows ICO format)
+
+Please see rhinote-doc.html for installation and usage information.
+The latest version of Rhinote is always available from http://rhinote.tuxfamily.org
