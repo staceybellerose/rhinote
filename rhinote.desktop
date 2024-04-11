@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Rhinote
+Comment=Virtual sticky-notes
+Comment[it]=Note di testo virtuali
+Exec=rhinote
+Terminal=false
+Type=Application
+Icon=rhinote
+Categories=Utility;TextEditor;
+Keywords=sticky;notes;text;editor;
